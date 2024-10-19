@@ -7,7 +7,7 @@
     ],
     "module": "commonjs",
     "rootDir": "./src",
-    "outDir": "./build",
+    "outDir": "./dist",
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
 
@@ -16,5 +16,5 @@
     "skipLibCheck": true
   },
   "include": ["src/**/*.ts", "spec/**/*.ts"],
-  "exclude": ["node_modules", "spec"]
+  "exclude": ["node_modules", "dist", "spec"]
 }
