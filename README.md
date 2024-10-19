@@ -51,8 +51,9 @@ This project is a RESTful API built with Node.js, Express, and PostgreSQL. It su
     SECRET_TOKEN=Project2:CreatinganAPIwithPostgreSQLandExpress
 
 4. **Start the Server**
-    To start the server, Then run: `npm start`
+    To start the server, Then run: `npm run watch`
     The server will run on `http://0.0.0.0:5000`
+    To test the server, Then run: `npm run test`
 
 5. **Creating Tables in PostgreSQL**
     To create the database and tables, follow these steps:
