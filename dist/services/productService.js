@@ -52,7 +52,7 @@ var ProductService = /** @class */ (function () {
     function ProductService() {
     }
     ProductService.prototype.fetchAllProducts = function () {
-        return __awaiter(this, void 0, void 0, function () {
+        return __awaiter(this, void 0, Promise, function () {
             var _this = this;
             return __generator(this, function (_a) {
                 switch (_a.label) {
@@ -79,7 +79,7 @@ var ProductService = /** @class */ (function () {
         });
     };
     ProductService.prototype.fetchProductInformation = function (pr_id) {
-        return __awaiter(this, void 0, void 0, function () {
+        return __awaiter(this, void 0, Promise, function () {
             var _this = this;
             return __generator(this, function (_a) {
                 switch (_a.label) {
@@ -106,7 +106,7 @@ var ProductService = /** @class */ (function () {
         });
     };
     ProductService.prototype.saveProduct = function (product) {
-        return __awaiter(this, void 0, void 0, function () {
+        return __awaiter(this, void 0, Promise, function () {
             var _this = this;
             return __generator(this, function (_a) {
                 switch (_a.label) {
@@ -133,7 +133,7 @@ var ProductService = /** @class */ (function () {
         });
     };
     ProductService.prototype.deleteProduct = function (prId) {
-        return __awaiter(this, void 0, void 0, function () {
+        return __awaiter(this, void 0, Promise, function () {
             var _this = this;
             return __generator(this, function (_a) {
                 switch (_a.label) {
@@ -162,7 +162,7 @@ var ProductService = /** @class */ (function () {
         });
     };
     ProductService.prototype.updateProduct = function (prId, updatedData) {
-        return __awaiter(this, void 0, void 0, function () {
+        return __awaiter(this, void 0, Promise, function () {
             var _this = this;
             return __generator(this, function (_a) {
                 switch (_a.label) {
@@ -196,7 +196,7 @@ var ProductService = /** @class */ (function () {
         });
     };
     ProductService.prototype.getProductsByCategory = function (category) {
-        return __awaiter(this, void 0, void 0, function () {
+        return __awaiter(this, void 0, Promise, function () {
             var _this = this;
             return __generator(this, function (_a) {
                 switch (_a.label) {

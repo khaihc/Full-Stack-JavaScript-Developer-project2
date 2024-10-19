@@ -44,7 +44,7 @@ var OrderService = /** @class */ (function () {
     }
     // Get all orders
     OrderService.prototype.index = function () {
-        return __awaiter(this, void 0, void 0, function () {
+        return __awaiter(this, void 0, Promise, function () {
             var _this = this;
             return __generator(this, function (_a) {
                 switch (_a.label) {
@@ -66,7 +66,7 @@ var OrderService = /** @class */ (function () {
     };
     // Create order
     OrderService.prototype.createOrder = function (order) {
-        return __awaiter(this, void 0, void 0, function () {
+        return __awaiter(this, void 0, Promise, function () {
             var _this = this;
             return __generator(this, function (_a) {
                 switch (_a.label) {
@@ -99,7 +99,7 @@ var OrderService = /** @class */ (function () {
     };
     // Get order by user_id
     OrderService.prototype.getOrdersByUser = function (userId) {
-        return __awaiter(this, void 0, void 0, function () {
+        return __awaiter(this, void 0, Promise, function () {
             var _this = this;
             return __generator(this, function (_a) {
                 switch (_a.label) {
@@ -121,7 +121,7 @@ var OrderService = /** @class */ (function () {
     };
     // Get completed orders by user_id
     OrderService.prototype.getCompletedOrdersByUser = function (userId) {
-        return __awaiter(this, void 0, void 0, function () {
+        return __awaiter(this, void 0, Promise, function () {
             var _this = this;
             return __generator(this, function (_a) {
                 switch (_a.label) {
@@ -143,7 +143,7 @@ var OrderService = /** @class */ (function () {
     };
     // Update order status
     OrderService.prototype.updateStatusOfOrder = function (orderId) {
-        return __awaiter(this, void 0, void 0, function () {
+        return __awaiter(this, void 0, Promise, function () {
             var _this = this;
             return __generator(this, function (_a) {
                 switch (_a.label) {
@@ -170,7 +170,7 @@ var OrderService = /** @class */ (function () {
         });
     };
     OrderService.prototype.deleteOrder = function (orderId) {
-        return __awaiter(this, void 0, void 0, function () {
+        return __awaiter(this, void 0, Promise, function () {
             var _this = this;
             return __generator(this, function (_a) {
                 switch (_a.label) {

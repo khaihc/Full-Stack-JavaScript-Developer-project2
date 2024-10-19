@@ -60,7 +60,7 @@ var UserService = /** @class */ (function () {
     function UserService() {
     }
     UserService.prototype.fetchAllUsers = function () {
-        return __awaiter(this, void 0, void 0, function () {
+        return __awaiter(this, void 0, Promise, function () {
             var _this = this;
             return __generator(this, function (_a) {
                 switch (_a.label) {
@@ -87,7 +87,7 @@ var UserService = /** @class */ (function () {
         });
     };
     UserService.prototype.fetchUserInformation = function (user_id) {
-        return __awaiter(this, void 0, void 0, function () {
+        return __awaiter(this, void 0, Promise, function () {
             var _this = this;
             return __generator(this, function (_a) {
                 switch (_a.label) {
@@ -119,7 +119,7 @@ var UserService = /** @class */ (function () {
         });
     };
     UserService.prototype.registerUser = function (user) {
-        return __awaiter(this, void 0, void 0, function () {
+        return __awaiter(this, void 0, Promise, function () {
             var _this = this;
             return __generator(this, function (_a) {
                 switch (_a.label) {
@@ -152,7 +152,7 @@ var UserService = /** @class */ (function () {
         });
     };
     UserService.prototype.deleteUser = function (userId) {
-        return __awaiter(this, void 0, void 0, function () {
+        return __awaiter(this, void 0, Promise, function () {
             var _this = this;
             return __generator(this, function (_a) {
                 switch (_a.label) {
@@ -181,7 +181,7 @@ var UserService = /** @class */ (function () {
         });
     };
     UserService.prototype.updateUser = function (userId, updatedData) {
-        return __awaiter(this, void 0, void 0, function () {
+        return __awaiter(this, void 0, Promise, function () {
             var _this = this;
             return __generator(this, function (_a) {
                 switch (_a.label) {

@@ -42,7 +42,7 @@ exports.__esModule = true;
 exports.executeQuery = void 0;
 var connection_1 = __importDefault(require("../connection"));
 function executeQuery(query) {
-    return __awaiter(this, void 0, void 0, function () {
+    return __awaiter(this, void 0, Promise, function () {
         var connection, error_1;
         return __generator(this, function (_a) {
             switch (_a.label) {
