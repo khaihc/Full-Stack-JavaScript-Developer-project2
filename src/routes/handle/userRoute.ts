@@ -48,7 +48,7 @@ userRoute.get("/:id", auth, async (req: Request, res: Response) => {
 });
 
 // Register User
-userRoute.post("/registerUser", auth, async (req: Request, res: Response) => {
+userRoute.post("/registerUser", async (req: Request, res: Response) => {
     try {
         const newUser: User = {
             user_name: req.body.user_name,
