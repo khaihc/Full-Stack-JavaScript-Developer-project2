@@ -18,7 +18,7 @@ describe('OrderService', () => {
             spyOn(dbService, 'executeQuery').and.callFake(async (callback) => {
                 return callback({
                     query: async () => ({ rows: mockOrders })
-                });
+                } as any);
             });
 
             const result = await orderService.index();
@@ -29,7 +29,7 @@ describe('OrderService', () => {
             spyOn(dbService, 'executeQuery').and.callFake(async (callback) => {
                 return callback({
                     query: async () => ({ rows: [] })
-                });
+                } as any);
             });
 
             const result = await orderService.index();
@@ -44,7 +44,7 @@ describe('OrderService', () => {
             spyOn(dbService, 'executeQuery').and.callFake(async (callback) => {
                 return callback({
                     query: async () => ({ rows: [mockResult] })
-                });
+                } as any);
             });
 
             const result = await orderService.createOrder(newOrder);
@@ -56,7 +56,7 @@ describe('OrderService', () => {
             spyOn(dbService, 'executeQuery').and.callFake(async (callback) => {
                 return callback({
                     query: async () => ({ rows: [] })
-                });
+                } as any);
             });
 
             await expectAsync(orderService.createOrder(newOrder)).toBeRejectedWithError('Error when inserting data into the database.');
@@ -72,7 +72,7 @@ describe('OrderService', () => {
             spyOn(dbService, 'executeQuery').and.callFake(async (callback) => {
                 return callback({
                     query: async () => ({ rows: mockOrders })
-                });
+                } as any);
             });
 
             const result = await orderService.getOrdersByUser(userId);
@@ -84,7 +84,7 @@ describe('OrderService', () => {
             spyOn(dbService, 'executeQuery').and.callFake(async (callback) => {
                 return callback({
                     query: async () => ({ rows: [] })
-                });
+                } as any);
             });
 
             const result = await orderService.getOrdersByUser(userId);
@@ -101,7 +101,7 @@ describe('OrderService', () => {
             spyOn(dbService, 'executeQuery').and.callFake(async (callback) => {
                 return callback({
                     query: async () => ({ rows: mockCompletedOrders })
-                });
+                } as any);
             });
 
             const result = await orderService.getCompletedOrdersByUser(userId);
@@ -113,7 +113,7 @@ describe('OrderService', () => {
             spyOn(dbService, 'executeQuery').and.callFake(async (callback) => {
                 return callback({
                     query: async () => ({ rows: [] })
-                });
+                } as any);
             });
 
             const result = await orderService.getCompletedOrdersByUser(userId);
@@ -128,7 +128,7 @@ describe('OrderService', () => {
             spyOn(dbService, 'executeQuery').and.callFake(async (callback) => {
                 return callback({
                     query: async () => ({ rows: [mockUpdatedOrder] })
-                });
+                } as any);
             });
 
             const result = await orderService.updateStatusOfOrder(orderId);
@@ -140,7 +140,7 @@ describe('OrderService', () => {
             spyOn(dbService, 'executeQuery').and.callFake(async (callback) => {
                 return callback({
                     query: async () => ({ rows: [] })
-                });
+                } as any);
             });
 
             await expectAsync(orderService.updateStatusOfOrder(orderId)).toBeRejectedWithError('Error when updating order status. Order ID may not exist.');
@@ -152,8 +152,8 @@ describe('OrderService', () => {
             const orderId = 1;
             spyOn(dbService, 'executeQuery').and.callFake(async (callback) => {
                 return callback({
-                    query: async () => ({ rows: [{ exists: true }] })
-                });
+                    query: async () => ({ rows: [{ exists: true }]} )
+                } as any);
             });
 
             const result = await orderService.deleteOrder(orderId);
@@ -165,7 +165,7 @@ describe('OrderService', () => {
             spyOn(dbService, 'executeQuery').and.callFake(async (callback) => {
                 return callback({
                     query: async () => ({ rows: [] })
-                });
+                } as any);
             });
 
             await expectAsync(orderService.deleteOrder(orderId)).toBeRejectedWithError(`Order with ID ${orderId} does not exist.`);

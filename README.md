@@ -49,6 +49,7 @@ This project is a RESTful API built with Node.js, Express, and PostgreSQL. It su
     BCRYPT_PASSWORD=udacity-project2
     SALT_ROUND=5
     SECRET_TOKEN=Project2:CreatinganAPIwithPostgreSQLandExpress
+    ENV=dev
 
 4. **Start the Server**
     To start the server, Then run: `npm run watch`

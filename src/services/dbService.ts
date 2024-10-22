@@ -1,7 +1,12 @@
-import client from '../connection';
+import client from "../connection";
+import { Pool, PoolClient } from 'pg';
 
-export async function executeQuery<T>(query: (connection: any) => Promise<T>): Promise<T> {
-    const connection = await client.connect();
+export async function executeQuery<T>(query: (connection: PoolClient) => Promise<T>): Promise<T> {
+    if (!client) {
+        throw new Error("Database client is not initialized.");
+    }
+
+    const connection: PoolClient = await client.connect();
     try {
         return await query(connection);
     } catch (error) {
