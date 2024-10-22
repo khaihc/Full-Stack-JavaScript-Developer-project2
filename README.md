@@ -36,6 +36,7 @@ This project is a RESTful API built with Node.js, Express, and PostgreSQL. It su
 
 2. **Install Dependencies**
     Make sure you have Node.js and npm installed. Then run: `npm install`
+    Use the command npm run db-migrate-up to execute `npm run db-migrate-up` and set up the database.
     Use the command npm run watch to run the application in development mode. This will start the app `npm run watch`, and you can use Postman to test the endpoints.
 
 3. **Set Up Environment Variables**
