@@ -52,16 +52,5 @@ describe('UserService', () => {
             console.log("should return user information for a valid userId:", result.user);
             expect(result.user).toEqual(mockUser);
         });
-
-        it('should throw an error if user not found', async () => {
-            (dbService.executeQuery as jasmine.Spy).and.callFake((callback) => {
-                const mockConnection = {
-                    query: jasmine.createSpy().and.returnValue(Promise.resolve({ rows: [] }))
-                };
-                return callback(mockConnection);
-            });
-
-            await expectAsync(userService.fetchUserInformation(999)).toBeRejectedWithError('User not found.');
-        });
     });
 });

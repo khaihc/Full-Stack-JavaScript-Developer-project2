@@ -30,3 +30,5 @@ CREATE TABLE IF NOT EXISTS order_product (
     FOREIGN KEY (product_id) REFERENCES products(id) ON DELETE CASCADE ON UPDATE CASCADE,
     PRIMARY KEY (order_id, product_id)
 );
+
+INSERT INTO users (first_name, last_name, user_name, password) VALUES ('admin', 'admin', 'admin', 'admin123');
