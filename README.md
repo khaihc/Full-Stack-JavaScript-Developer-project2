@@ -57,7 +57,12 @@ This project is a RESTful API built with Node.js, Express, and PostgreSQL. It su
     The server will run on `http://0.0.0.0:5000`
     To test the server, Then run: `npm run test`
 
-5. **Creating Tables in PostgreSQL**
+5. **PostgreSQL Install**
+    PostgreSQL installation: `https://www.postgresql.org/download/`
+    Create a postgres local name called: Database: `postgres`, username: `postgres`, password: `postgres` with env below
+    SQL query: `CREATE DATABASE postgres;`
+
+6. **Creating Tables in PostgreSQL**
     To create the database and tables, follow these steps:
     Go to the Migrations Folder: Open the `migrations` folder.
     Open the SQL File: Find the file named `postgres-project2.sql` and open it.
@@ -69,7 +74,7 @@ This project is a RESTful API built with Node.js, Express, and PostgreSQL. It su
         Password: postgres
     Execute the commands in postgres-project2.sql. This file contains all the necessary commands to create the database and tables.
 
-6. **CRUD Operations with Postman**
+7. **CRUD Operations with Postman**
     Import the Postman Collection
     Open Postman.
     Click on the Import button.
